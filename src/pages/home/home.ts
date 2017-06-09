@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 import 'rxjs/add/operator/map';
 
 /* Decorador do componente page-home */
@@ -31,4 +32,8 @@ export class HomePage {
         console.log(this.feeds);
       });
   }
+  itemSelected (feed):void {
+    let browser = new InAppBrowser();
+    browser.create(feed.data.url, '_system');
+  } 
 }
