@@ -1,30 +1,25 @@
-<<<<<<< HEAD
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Mini-curso de Ionic & Angular
+![Logo](./docs/ionic-logo.png)
+## Preparação do ambiente
+### Ferramentas
+- [NodeJS](https://nodejs.org/en/download/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Cordova e Ionic](https://ionicframework.com/docs/developer-resources/platform-setup/windows-setup.html)
+    - sudo npm install -g ionic cordova
 
-## How to use this template
+## Projeto
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
+### Criação da estrutura inicial
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ ionic start curso blank --appname “Curso” --id “br.unp.sistemas.ionic”
+...
+? Link this app to your Ionic Dashboard to use tools like Ionic View? (Y/n) n
+$ cd curso
+$ ionic serve
 ```
 
-Then, to run it, cd into `myBlank` and run:
-
+### Compilando para Android
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ ionic cordova platform add android
+$ ionic cordova run android
 ```
-
-Substitute ios for android if not on a Mac.
-
-=======
-# curso_ionic
->>>>>>> 2006be833a95b829447d860378531ac2f932f9eb
