@@ -275,3 +275,24 @@ export class HomePage {
   } 
 }
 ```
+#### Responsividade e correção da imagem que falta
+#### src/pages/home/home.html
+```xml
+<ion-header>
+  <ion-navbar>
+    <ion-title>Leitor de Feeds</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let feed of feeds" (click)="itemSelected(feed)">
+      <ion-thumbnail item-left>
+        <img [src]="feed.data.thumbnail">
+      </ion-thumbnail>
+      <h2>{{feed.data.title}}</h2>
+      <p>{{feed.data.domain}}</p>
+    </button>
+  </ion-list>
+</ion-content>
+```
+#### src/pages/home/home.ts

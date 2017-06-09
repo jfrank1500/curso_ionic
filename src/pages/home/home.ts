@@ -29,11 +29,15 @@ export class HomePage {
       .subscribe(data => {
         this.feeds = data.data.children;
         loading.dismiss();
-        console.log(this.feeds);
+        this.feeds.forEach((e:any, i, a) => {
+          if (!e.data.thumbnail || e.data.thumbnail.indexOf('b.thumbs.redditmedia.com') === -1) {
+            e.data.thumbnail = 'http://www.redditstatic.com/icon.png';
+          }
+        })
       });
   }
-  itemSelected (feed):void {
+  itemSelected(feed): void {
     let browser = new InAppBrowser();
     browser.create(feed.data.url, '_system');
-  } 
+  }
 }
